@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="uft-8">
+<title>無限ウィングマン</title>
+<link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+<button type="button" onclick="soundPlay()">ここをクリック
+    <div class="audio", id="audio">
+        　　<audio id="sounds" src="wingman-body-armor.mp3" preload="auto">
+        　　</audio>
+        </div>
+</button>
+<script>    
+window.addEventListener("DOMContentLoaded", () => {
+　　const audio = document.getElementById("audio");
+　audio.addEventListener('click', function(){
+　　document.getElementById("sounds").currentTime = 0;
+　　document.getElementById("sounds").play();
+　});
+});
+</script>
+</body>
+</html>
