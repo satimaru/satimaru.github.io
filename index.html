@@ -7,18 +7,44 @@
 
 </head>
 <body>
-<button type="button" onclick="soundPlay()">ここをクリック
-    <div class="audio", id="audio">
-        　　<audio id="sounds" src="wingman-body-armor.mp3" preload="auto">
+<button type="button" onclick="soundPlay()">ボディ - アーマー
+    <div class="audio1", id="audio1">
+        　　<audio id="sounds1" src="wingman-body-armor.mp3" preload="auto">
+        　　</audio>
+        </div>
+</button>
+<button type="button" onclick="soundPlay()">ヘッド - 割れる
+    <div class="audio2", id="audio2">
+        　　<audio id="sounds2" src="wingman-head-clack.mp3" preload="auto">
+        　　</audio>
+        </div>
+</button>
+<button type="button" onclick="soundPlay()">ヘッド - ダウン
+    <div class="audio3", id="audio3">
+        　　<audio id="sounds3" src="wingman-head-down.mp3" preload="auto">
         　　</audio>
         </div>
 </button>
 <script>    
 window.addEventListener("DOMContentLoaded", () => {
-　　const audio = document.getElementById("audio");
+　　const audio = document.getElementById("audio1");
 　audio.addEventListener('click', function(){
-　　document.getElementById("sounds").currentTime = 0;
-　　document.getElementById("sounds").play();
+　　document.getElementById("sounds1").currentTime = 0;
+　　document.getElementById("sounds1").play();
+　});
+});
+window.addEventListener("DOMContentLoaded", () => {
+　　const audio = document.getElementById("audio2");
+　audio.addEventListener('click', function(){
+　　document.getElementById("sounds2").currentTime = 0;
+　　document.getElementById("sounds2").play();
+　});
+});
+window.addEventListener("DOMContentLoaded", () => {
+　　const audio = document.getElementById("audio3");
+　audio.addEventListener('click', function(){
+　　document.getElementById("sounds3").currentTime = 0;
+　　document.getElementById("sounds3").play();
 　});
 });
 </script>
